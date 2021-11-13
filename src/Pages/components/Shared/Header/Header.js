@@ -169,17 +169,24 @@ const Navigation = ({ window, handleClickOpen }) => {
       </Link>
       <Divider />
       {user?.email ? (
-        <Link to="/register" className={link}>
-          <ListItem button className={navItemM}>
-            <ListItemText primary={"Register"} />
-          </ListItem>
-        </Link>
+        <>
+          <Button onClick={logOut} sx={{ color: "#15c7e7" }}>
+            Logout
+          </Button>
+        </>
       ) : (
-        <Link to="/register" className={link}>
-          <ListItem button className={navItemM}>
-            <ListItemText primary={"Register"} />
-          </ListItem>
-        </Link>
+        <>
+          <Link to="/login" className={link}>
+            <ListItem button className={navItemM}>
+              <ListItemText primary={"Login"} />
+            </ListItem>
+          </Link>
+          <Link to="/register" className={link}>
+            <ListItem button className={navItemM}>
+              <ListItemText primary={"Register"} />
+            </ListItem>
+          </Link>
+        </>
       )}
       <Divider />
     </div>
@@ -250,17 +257,6 @@ const Navigation = ({ window, handleClickOpen }) => {
                 <Link className={linkItem} to="/dashboard">
                   <span className={navItem}>Dashboard</span>
                 </Link>
-
-                {/* {user.email ?
-                        <Avatar
-                            style={{ display: 'inline-flex', top: 10 }}
-                            src={loggedInUser.photoURL} /> :
-                        <Link className={linkItem} to='/login'><Button><span className={navItem}>Login</span></Button></Link>} */}
-
-                {/*
-                  <Button onClick={logOut}>
-                    <span className={navItem}>Logout</span>
-                  </Button> */}
               </div>
               <div className="account">
                 {user?.email ? (
@@ -279,11 +275,18 @@ const Navigation = ({ window, handleClickOpen }) => {
                     </Button>
                   </div>
                 ) : (
-                  <Link className={linkItem} to="/register">
-                    <Button varaint="outlined" style={{ color: "#15c7e7" }}>
-                      Register
-                    </Button>
-                  </Link>
+                  <>
+                    <Link className={linkItem} to="/register">
+                      <Button varaint="outlined" style={{ color: "#15c7e7" }}>
+                        Register
+                      </Button>
+                    </Link>
+                    <Link className={linkItem} to="/login">
+                      <Button varaint="contained" style={{ color: "#15c7e7" }}>
+                        Login
+                      </Button>
+                    </Link>
+                  </>
                 )}
               </div>
             </Container>
