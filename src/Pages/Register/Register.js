@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import "./Register.css";
 
@@ -15,6 +15,7 @@ const Register = () => {
     notify,
   } = useAuth();
   const history = useHistory();
+  const { query } = useLocation();
 
   const [error, setError] = useState(false);
   const [passError, setPassError] = useState(false);
@@ -50,7 +51,7 @@ const Register = () => {
         updateName(data.name);
         saveUser(data.email, data.name);
         notify("success", "Sign UP Successfull!!");
-        history.push("/");
+        history.push(query.redirect_url.pathname || "/");
       })
       .catch((err) => {
         notify("error", "Sign Up unsuccessfull,please try again");

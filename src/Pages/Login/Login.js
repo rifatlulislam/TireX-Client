@@ -88,7 +88,7 @@ const Login = () => {
               <span style={{ letterSpacing: "1px", margin: "3px 0" }}>
                 Not have an account?
                 <Link
-                  to="/register"
+                  to={{ pathname: "/register", query: { redirect_url } }}
                   style={{ color: "lightBlue", textDecoration: "none" }}
                 >
                   Register!

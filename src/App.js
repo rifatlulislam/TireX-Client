@@ -18,10 +18,10 @@ const theme = createTheme({
     fontFamily: "BerlinSansFBDemiBold",
   },
 });
+
+// initializing animaiton on scroll
 AOS.init();
 function App() {
-  // initialize toastify
-
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
