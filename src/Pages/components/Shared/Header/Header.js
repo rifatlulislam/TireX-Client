@@ -16,6 +16,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../../../hooks/useAuth";
 
+// this header is not working after deploy..so i had to use a custome one..i kept it to fix later
 const drawerWidth = 200;
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -125,7 +126,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Navigation = ({ window, handleClickOpen }) => {
+const Header = ({ window, handleClickOpen }) => {
   const { user, logOut } = useAuth();
 
   const {
@@ -297,4 +298,4 @@ const Navigation = ({ window, handleClickOpen }) => {
   );
 };
 
-export default Navigation;
+export default Header;

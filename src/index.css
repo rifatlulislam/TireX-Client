@@ -60,15 +60,6 @@ img {
 
 /* responsive useing media query */
 @media (min-width: 861px) {
-  .menu-icon {
-    display: none !important;
-  }
 }
 @media (max-width: 860px) {
-  .menu-icon {
-    display: block !important;
-  }
-  .navbar {
-    display: none !important;
-  }
 }

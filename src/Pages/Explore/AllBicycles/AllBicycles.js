@@ -20,7 +20,7 @@ const AllBicycles = () => {
   }, []);
   return (
     <div>
-      <Container sx={{ py: 25 }}>
+      <Container sx={{ py: 10 }}>
         <div className="section">
           <div className="section-title">
             <h3 className="second-title" data-aos="fade-right">

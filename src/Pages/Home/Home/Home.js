@@ -1,5 +1,5 @@
 import Footer from "../../components/Shared/Footer/Footer";
-import Text from "../../Test/Text";
+import Navigation from "../../components/Shared/Navigation/Navigation";
 import Banner from "../Banner/Banner";
 import BestBicycle from "../BestBicycle/BestBicycle";
 import Bicycles from "../Bicyles/Bicycles";
@@ -10,7 +10,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <>
-      <Text />
+      <Navigation />
       <Banner />
       <Categories />
       <Bicycles />

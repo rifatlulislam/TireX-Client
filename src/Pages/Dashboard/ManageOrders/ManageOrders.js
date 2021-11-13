@@ -72,7 +72,7 @@ export default function ManageOrders() {
               Product Name
             </StyledTableCell>
             <StyledTableCell align="left" sx={{ fontSize: "1.2rem" }}>
-              Date
+              Order Date
             </StyledTableCell>
             <StyledTableCell align="left" sx={{ fontSize: "1.2rem" }}>
               Status

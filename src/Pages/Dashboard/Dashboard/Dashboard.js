@@ -2,6 +2,7 @@ import AddBoxSharpIcon from "@mui/icons-material/AddBoxSharp";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
+import HomeIcon from "@mui/icons-material/Home";
 import ManageAccountsSharpIcon from "@mui/icons-material/ManageAccountsSharp";
 import MenuIcon from "@mui/icons-material/Menu";
 import PaymentIcon from "@mui/icons-material/Payment";
@@ -77,19 +78,19 @@ function Dashboard(props) {
         {/* user dashboard starts */}
         {user.email && !admin && (
           <List>
-            {/* <ListItem button onClick={() => history.push("/")}>
+            <ListItem button onClick={() => history.push("/")}>
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
               <Link to="/" className="drawer-link">
                 <ListItemText>Home</ListItemText>
               </Link>
-            </ListItem> */}
-            <ListItem button onClick={() => history.push(`${url}`)}>
+            </ListItem>
+            <ListItem button onClick={() => history.push(`${url}/myOrders`)}>
               <ListItemIcon>
                 <FormatListBulletedIcon />
               </ListItemIcon>
-              <Link to={`${url}`} className="drawer-link">
+              <Link to={`${url}/myOrders`} className="drawer-link">
                 <ListItemText>My Orders</ListItemText>
               </Link>
             </ListItem>
@@ -114,14 +115,14 @@ function Dashboard(props) {
         {/* admin dashboard starts */}
         {user.email && admin && (
           <>
-            {/* <ListItem button onClick={() => history.push("/")}>
+            <ListItem button onClick={() => history.push("/")}>
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
               <Link to="/" className="drawer-link">
                 <ListItemText>Home</ListItemText>
               </Link>
-            </ListItem> */}
+            </ListItem>
             <List>
               <ListItem button onClick={() => history.push(`${url}/makeAdmin`)}>
                 <ListItemIcon>
@@ -278,6 +279,9 @@ function Dashboard(props) {
 
           <Route exact path={`${path}/review`}>
             <Review />
+          </Route>
+          <Route exact path={`${path}/myOrders`}>
+            <MyOrders />
           </Route>
           <Route exact path={`${path}/pay`}>
             <Pay />

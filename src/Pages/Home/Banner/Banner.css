@@ -1,6 +1,6 @@
 .hero {
   height: 100vh;
-  padding-top: var(--header-height);
+  padding-top: 90px;
   position: relative;
 }
 .slide-container {
