@@ -129,7 +129,7 @@ const Navigation = ({ window, handleClickOpen }) => {
   const { user, logOut } = useAuth();
 
   const {
-    root,
+    // root,
     appBar,
     menuButton,
     drawerPaper,

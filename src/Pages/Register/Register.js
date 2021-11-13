@@ -22,7 +22,7 @@ const Register = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    // formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
@@ -120,11 +120,11 @@ const Register = () => {
                   password didn't match
                 </p>
               )}
-              {error && (
+              {/* {error && (
                 <p style={{ color: "red", letterSpacing: "2px" }}>
                   input fields cannot be empty
                 </p>
-              )}
+              )} */}
               <input type="submit" value="SUBMIT" className="submit-btn" />
             </form>
           </div>
