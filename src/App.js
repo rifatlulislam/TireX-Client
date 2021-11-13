@@ -6,6 +6,7 @@ import "./App.css";
 import AuthProvider from "./Context/AuthProvider/AuthProvider";
 import PrivateRoute from "./Pages/components/Shared/PrivateRoute/PrivateRoute";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import Error from "./Pages/Error/Error";
 import AllBicycles from "./Pages/Explore/Explore/Explore";
 import Home from "./Pages/Home/Home/Home";
 import Login from "./Pages/Login/Login";
@@ -47,6 +48,9 @@ function App() {
               </Route>
               <Route path="/login">
                 <Login />
+              </Route>
+              <Route path="*">
+                <Error />
               </Route>
             </Switch>
           </Router>
