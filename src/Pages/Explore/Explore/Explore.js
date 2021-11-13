@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "../../components/Shared/Footer/Footer";
-import Header from "../../components/Shared/Header/Header";
+import Text from "../../Test/Text";
 import AllBicycles from "../AllBicycles/AllBicycles";
 
 const Explore = () => {
   return (
     <>
-      <Header />
+      <Text></Text>
       <AllBicycles />
       <Footer />
     </>
