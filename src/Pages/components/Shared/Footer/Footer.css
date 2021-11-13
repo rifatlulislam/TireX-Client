@@ -1,0 +1,52 @@
+footer {
+  background-color: var(--second-color);
+}
+.footer-description {
+  margin: 30px 0;
+}
+
+.socials {
+  margin: 20px 0;
+  text-align: left;
+}
+.social-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+  margin-left: 20px;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--text-white);
+}
+
+.menu-item {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: block;
+}
+.menu-item:hover {
+  color: var(--text-white);
+}
+.subscribe-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.subscribe-form input {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+}
+.footer-header {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--text-white);
+}
+.footer-btn {
+  margin-left: 5px;
+  display: inline-block;
+}

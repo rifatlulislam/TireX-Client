@@ -1,0 +1,12 @@
+.drawer-link {
+  text-decoration: none;
+  font-family: BerlinSansFBDemiBold;
+  font-weight: 600;
+  font-size: 4rem;
+  color: #3a3a3a;
+  letter-spacing: 1px;
+}
+.drawer-link:hover {
+  color: black;
+  font-weight: 800;
+}

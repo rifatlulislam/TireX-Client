@@ -1,0 +1,46 @@
+.btn-wrapper {
+  position: absolute;
+  margin-top: 40px;
+  right: 0;
+  top: 50%;
+  transition: transform(-50%);
+}
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: var(--second-color);
+  color: var(--text-white);
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: var(--text-white);
+  color: var(--main-color);
+}
+.product-card {
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease 0s;
+}
+.product-card:hover {
+  background: var(--bg-black);
+}
+.product-card-img {
+  margin-bottom: 20px;
+}
+.product-name {
+  font-size: 2rem;
+  color: var(--text-color);
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.product-price {
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  display: block;
+}

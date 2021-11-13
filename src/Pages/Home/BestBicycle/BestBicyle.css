@@ -1,0 +1,40 @@
+.special-section {
+  position: relative;
+  margin-bottom: 290px;
+  padding-top: 4rem;
+}
+
+.special-section > .section-title {
+  text-align: right;
+  padding: 4rem 7rem;
+  background-color: var(--bg-black);
+}
+.special-section .second-title {
+  position: relative;
+  font-size: 3.5rem;
+  color: var(--text-white);
+  left: 0;
+  z-index: unset;
+}
+.special-section .main-title {
+  font-size: 5rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-fill-color: transparent;
+}
+.special-section .section-title .btn {
+  position: relative;
+  right: unset;
+  top: unset;
+  font-size: 1.5rem;
+}
+.special-price {
+  font-size: 3rem;
+  color: var(--text-white);
+  margin-bottom: 2rem;
+}
+.special-img {
+  width: 50%;
+  position: absolute;
+  left: 8rem;
+  bottom: -210px;
+}

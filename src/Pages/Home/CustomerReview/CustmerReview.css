@@ -1,0 +1,27 @@
+.review-card {
+  padding: 3rem;
+  border: 2px solid var(--third-color);
+  border-radius: 4px;
+  text-align: center;
+  height: 270px;
+}
+.customer-feedback {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+.review-img-div {
+  width: 70px;
+}
+.customer-img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.customer-name {
+  text-align: left;
+  font-weight: 1.1rem;
+  margin-bottom: 5px;
+}

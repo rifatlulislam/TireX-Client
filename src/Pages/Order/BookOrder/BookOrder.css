@@ -1,0 +1,40 @@
+.order-form {
+  padding: 3rem;
+  border: 1px solid #bbbbbb;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px -5px rgba(255, 2555, 255, 0.5);
+}
+
+.input-field {
+  color: #bbbbbb;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  background-color: #1d1d1d;
+  margin: 10px 0;
+  padding: 12px 24px;
+  border-bottom: 1px solid #706f6f;
+  transition: all 0.1s ease 0s;
+}
+.input-field:focus {
+  outline: 1px solid #15c7e7;
+}
+.submit-btn {
+  font-family: BerlinSansFBDemiBold;
+  font-weight: 500;
+  font-size: 1.3em;
+  color: #fff;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #15c7e7;
+  outline: none;
+  padding: 16px 30px;
+  margin: 20px 0;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+.submit-btn:hover {
+  color: var(--main-color);
+  background-color: var(--text-white);
+}

@@ -1,0 +1,99 @@
+[
+  {
+    "id": "101",
+    "img": "https://i.ibb.co/2WWz8Ks/531352.png",
+    "name": "POLYGON SISKU",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at! Ab facilis aliquam maxime eos minus, praesentium itaque dignissimos enim vero pariatur necessitatibus dolorum quaerat porro laborum sunt illo rem.",
+    "price": "$4,600.00",
+    "rating": "5"
+  },
+
+  {
+    "id": "102",
+    "img": "https://i.ibb.co/Mg8yBQ1/6489548.png",
+    "name": "XTRADA HARDTAIL",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at! Ab facilis aliquam maxime eos minus, praesentium itaque dignissimos enim vero pariatur necessitatibus dolorum quaerat porro laborum sunt illo rem.",
+    "price": "2,099.00",
+    "rating": "5"
+  },
+  {
+    "id": "103",
+    "img": "https://i.ibb.co/Xs9ft41/b1.png",
+    "name": "HAIBIKE XDURO RX",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at! Ab facilis aliquam maxime eos minus, praesentium itaque dignissimos enim vero pariatur necessitatibus dolorum quaerat porro laborum sunt illo rem.",
+    "price": "3,100.00",
+    "rating": "4.9"
+  },
+  {
+    "id": "104",
+    "img": "https://i.ibb.co/8j24G4V/b2.png",
+    "name": "NORCHO YOUTH BICYCLE",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at! Ab facilis aliquam maxime eos minus, praesentium itaque dignissimos enim vero pariatur necessitatibus dolorum quaerat porro laborum sunt illo rem.",
+    "price": "2,900.00",
+    "rating": "4.9"
+  },
+  {
+    "id": "105",
+    "img": "https://i.ibb.co/YZVz70w/MTBROMO-N7-2022.png",
+    "name": "MT BROMO N7",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at! Ab facilis aliquam maxime eos minus, praesentium itaque dignissimos enim vero pariatur necessitatibus dolorum quaerat porro laborum sunt illo rem.",
+    "price": "2,700.00",
+    "rating": "4.8"
+  },
+  {
+    "id": "106",
+    "img": "https://i.ibb.co/8j24G4V/b2.png",
+    "name": "POLYGON CASCADE",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at! Ab facilis aliquam maxime eos minus, praesentium itaque dignissimos enim vero pariatur necessitatibus dolorum quaerat porro laborum sunt illo rem.",
+    "price": "2,400.00",
+    "rating": "4.7"
+  },
+  {
+    "id": "107",
+    "img": "https://i.ibb.co/Xs9ft41/b1.png",
+    "name": "ENDURO MOUNTAIN BIKE",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at! Ab facilis aliquam maxime eos minus, praesentium itaque dignissimos enim vero pariatur necessitatibus dolorum quaerat porro laborum sunt illo rem.",
+    "price": "2,100.00",
+    "rating": "4.6"
+  },
+  {
+    "id": "108",
+    "img": "https://i.ibb.co/Mg8yBQ1/6489548.png",
+    "name": "FORK MOUNTAIN",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at! Ab facilis aliquam maxime eos minus, praesentium itaque dignissimos enim vero pariatur necessitatibus dolorum quaerat porro laborum sunt illo rem.",
+    "price": "1,800.00",
+    "rating": "4.6"
+  },
+  {
+    "id": "109",
+    "img": "https://i.ibb.co/Xs9ft41/b1.png",
+    "name": "BEACH CRUSIER",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at! Ab facilis aliquam maxime eos minus, praesentium itaque dignissimos enim vero pariatur necessitatibus dolorum quaerat porro laborum sunt illo rem.",
+    "price": "1,800.00",
+    "rating": "4.6"
+  },
+  {
+    "id": "110",
+    "img": "https://i.ibb.co/Xs9ft41/b1.png",
+    "name": "LEOPARD RIDER",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at! Ab facilis aliquam maxime eos minus, praesentium itaque dignissimos enim vero pariatur necessitatibus dolorum quaerat porro laborum sunt illo rem.",
+    "price": "1,800.00",
+    "rating": "4.6"
+  },
+  {
+    "id": "111",
+    "img": "https://i.ibb.co/8j24G4V/b2.png",
+    "name": "LEIGHTWIEGHT M730",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at! Ab facilis aliquam maxime eos minus, praesentium itaque dignissimos enim vero pariatur necessitatibus dolorum quaerat porro laborum sunt illo rem.",
+    "price": "1,800.00",
+    "rating": "4.6"
+  },
+  {
+    "id": "112",
+    "img": "https://i.ibb.co/2WWz8Ks/531352.png",
+    "name": "MIGHTY GOLD",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at! Ab facilis aliquam maxime eos minus, praesentium itaque dignissimos enim vero pariatur necessitatibus dolorum quaerat porro laborum sunt illo rem.",
+    "price": "1,500.00",
+    "rating": "4.5"
+  }
+]
