@@ -24,9 +24,9 @@ const Footer = () => {
               </h3>
 
               <p className="footer-description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Dignissimos molestiae vero accusamus quo maiores est ipsum
-                veritatis perspiciatis dolore laudantium.
+                We have the best collection of Road,Urban, mountain and
+                cyclocross bicycles.Free shipping is also avilable on Black
+                Friday
               </p>
               <div className="socials">
                 <span className="social-icon">
@@ -59,9 +59,8 @@ const Footer = () => {
             <Grid item xs={12} md={3}>
               <h3 className="footer-header">news letter</h3>
               <p className="footer-description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Tenetur atque nesciunt doloribus optio laudantium excepturi
-                illum fugiat tempora reiciendis assumenda.
+                We have a big community with many of our customers.Join us with
+                news letter
               </p>
               <div className="subscribe-form">
                 <input type="text" placeholder="Your Email..." />
