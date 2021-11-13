@@ -3,7 +3,7 @@
   border: 2px solid var(--third-color);
   border-radius: 4px;
   text-align: center;
-  height: 270px;
+  min-height: 265px;
 }
 .customer-feedback {
   font-size: 1.2rem;
@@ -24,4 +24,5 @@
   text-align: left;
   font-weight: 1.1rem;
   margin-bottom: 5px;
+  letter-spacing: 1px;
 }

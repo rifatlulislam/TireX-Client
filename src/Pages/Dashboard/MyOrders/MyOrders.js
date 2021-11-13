@@ -23,10 +23,12 @@ const MyOrders = () => {
   useEffect(() => {
     setIsDeleted(false);
     setShowLoader(true);
-    axios.get(`http://localhost:5000/orders/${user?.email}`).then((res) => {
-      setShowLoader(false);
-      setOrders(res.data);
-    });
+    axios
+      .get(`https://calm-reaches-87696.herokuapp.com/orders/${user?.email}`)
+      .then((res) => {
+        setShowLoader(false);
+        setOrders(res.data);
+      });
   }, [isDeleted]);
 
   const handleDelete = (id) => {

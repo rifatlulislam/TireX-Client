@@ -23,9 +23,8 @@ const Banner = () => {
                   Welcome to TireX - Shop a huge selection of Road,Urban,
                   mountain and cyclocross bicycles. Huge savings on parts,
                   components and accessories! Free shipping on qualifying
-                  orders. Any ride would be incomplete without lights. Make sure
-                  you're ready to keep logging those miles when the days become
-                  shorter.
+                  orders.Special offer avilable on Polygon and Xtrada,grab one
+                  now.
                 </p>
               </div>
               <div className="slide-btn">
@@ -53,8 +52,7 @@ const Banner = () => {
                   as possible, knowing you are eager to try them out. We offer a
                   variety of shipping carriers and options such as Free
                   Shipping, Flat Rate Shipping, Express Delivery and Rush
-                  Processing. See the options listed on this page for more
-                  information.
+                  Processing.
                 </p>
               </div>
               <div className="slide-btn">
