@@ -1,6 +1,4 @@
-
-# **TireX**
-
+# **TuaBike**
 
 <!-- <a  href="https://my-gerez.web.app/">
 <img  width="100%"  height="100%"  src="https://i.ibb.co/kg8DWn9/Gerez.png"/>
@@ -8,8 +6,7 @@
 
 ## About & Features
 
-
-**TireX** is a full-stack single-page Bicycle e-commerce  web app.
+**TireX** is a full-stack single-page Bicycle e-commerce web app.
 
 - Login system with firebase, private routes and dashboard for admins and users .
 - Users can order cycles, monitor their orderlist and give a review
@@ -19,20 +16,22 @@
 -
 
 ### Front-end Technology :
+
 - **React, React-Router-Dom,**
 - **Materail-UI**
 - **CSS3**
 - **Firebase Authentication**
 
-
 ### Back-end Technology :
+
 - **Node**
 - **Express**
 - **MongoDB**
 
-### `Website Link :` []()
+### `Website Link :` [https://tuabike-1c417.web.app/](https://tuabike-1c417.web.app/)
 
 <hr/>
 
-**[Back-end Repository]()**
+**[Back-end Repository](https://github.com/programming-hero-web-course-4/niche-website-server-side-smsakawat)**
+
 <hr/>

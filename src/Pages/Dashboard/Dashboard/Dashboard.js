@@ -2,7 +2,6 @@ import AddBoxSharpIcon from "@mui/icons-material/AddBoxSharp";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
-import HomeIcon from "@mui/icons-material/Home";
 import ManageAccountsSharpIcon from "@mui/icons-material/ManageAccountsSharp";
 import MenuIcon from "@mui/icons-material/Menu";
 import PaymentIcon from "@mui/icons-material/Payment";
@@ -78,14 +77,14 @@ function Dashboard(props) {
         {/* user dashboard starts */}
         {user.email && !admin && (
           <List>
-            <ListItem button onClick={() => history.push("/")}>
+            {/* <ListItem button onClick={() => history.push("/")}>
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
               <Link to="/" className="drawer-link">
                 <ListItemText>Home</ListItemText>
               </Link>
-            </ListItem>
+            </ListItem> */}
             <ListItem button onClick={() => history.push(`${url}`)}>
               <ListItemIcon>
                 <FormatListBulletedIcon />
@@ -115,20 +114,20 @@ function Dashboard(props) {
         {/* admin dashboard starts */}
         {user.email && admin && (
           <>
-            <ListItem button onClick={() => history.push("/")}>
+            {/* <ListItem button onClick={() => history.push("/")}>
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
               <Link to="/" className="drawer-link">
                 <ListItemText>Home</ListItemText>
               </Link>
-            </ListItem>
+            </ListItem> */}
             <List>
               <ListItem button onClick={() => history.push(`${url}/makeAdmin`)}>
                 <ListItemIcon>
                   <AdminPanelSettingsIcon />
                 </ListItemIcon>
-                <Link to={`${url}`} className="drawer-link">
+                <Link to={`${url}/makeAdmin`} className="drawer-link">
                   <ListItemText>Make Admin</ListItemText>
                 </Link>
               </ListItem>
@@ -273,7 +272,7 @@ function Dashboard(props) {
           )}
           {user.email && admin && (
             <Route exact path={path}>
-              <MakeAdmin />
+              <ManageOrders />
             </Route>
           )}
 
