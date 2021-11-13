@@ -82,6 +82,7 @@ export default function ManageOrders() {
             </StyledTableCell>
           </TableRow>
         </TableHead>
+
         <TableBody>
           {allOrders.map((order, index) => (
             <SingleOrder

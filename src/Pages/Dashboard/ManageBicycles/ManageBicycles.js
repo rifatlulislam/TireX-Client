@@ -34,17 +34,16 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function ManageBicycles() {
   const [bicycles, setBicycles] = React.useState([]);
-  //   const [showLoader, setShowLoader] = React.useState(false);
+
   const [isDeletd, setIsDeleted] = React.useState(false);
   const { notify } = useAuth();
 
   React.useEffect(() => {
     setIsDeleted(false);
-    // setShowLoader(true);
+
     axios
       .get("https://calm-reaches-87696.herokuapp.com/allBicycles")
       .then((res) => {
-        //   setShowLoader(false);
         setBicycles(res.data);
       });
   }, [isDeletd]);
@@ -84,6 +83,36 @@ export default function ManageBicycles() {
             </StyledTableCell>
           </TableRow>
         </TableHead>
+
+        <TableBody>
+          {bicycles.map(({ _id, name, price, rating }, index) => (
+            <StyledTableRow key={index}>
+              <StyledTableCell component="th" scope="row">
+                {index + 1}
+              </StyledTableCell>
+              <StyledTableCell align="left">{name}</StyledTableCell>
+              <StyledTableCell
+                align="left"
+                style={{ fontSize: "1.4rem !important" }}
+              >
+                {price}
+              </StyledTableCell>
+              <StyledTableCell align="left">{rating}</StyledTableCell>
+              <StyledTableCell align="left">
+                <IconButton
+                  onClick={() => handleDelete(_id)}
+                  color="error"
+                  aria-label="upload picture"
+                  component="span"
+                  sx={{ fontSize: "1.4rem" }}
+                >
+                  <DeleteIcon></DeleteIcon>
+                </IconButton>
+              </StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+
         <TableBody>
           {bicycles.map(({ _id, name, price, rating }, index) => (
             <StyledTableRow key={index}>

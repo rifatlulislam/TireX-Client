@@ -57,7 +57,7 @@ const AddCylce = () => {
                 width: "max-content",
               }}
             >
-              Add Bicyle
+              Add Bicycle
             </h2>
             <form
               noValidate
