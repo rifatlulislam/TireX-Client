@@ -16,7 +16,7 @@ const Register = () => {
   } = useAuth();
   const history = useHistory();
 
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   const [passError, setPassError] = useState(false);
   const {
     register,
@@ -26,7 +26,7 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    setError(false);
+    // setError(false);
     setPassError(false);
     if (
       data.name === "" ||
@@ -34,7 +34,7 @@ const Register = () => {
       data.password === "" ||
       data.password2 === ""
     ) {
-      setError(true);
+      // setError(true);
       return;
     }
     if (data.password !== data.password2) {
