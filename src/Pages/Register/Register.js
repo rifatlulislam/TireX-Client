@@ -52,9 +52,7 @@ const Register = () => {
         notify("success", "Sign UP Successfull!!");
         history.push("/");
       })
-      .catch((err) => {
-        notify("error", "Sign Up unsuccessfull,please try again");
-      })
+      .catch((err) => {})
       .finally(setIsLoading(false));
 
     console.log(data);
