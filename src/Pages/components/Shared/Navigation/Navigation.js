@@ -30,11 +30,10 @@ const Navigation = () => {
               <li>
                 <Link to="/explore">Explore</Link>
               </li>
-              {user?.email && (
-                <li>
-                  <Link to="/dashboard">Dashboard</Link>
-                </li>
-              )}
+
+              <li>
+                <Link to="/dashboard">Dashboard</Link>
+              </li>
             </ul>
           </nav>
           <div>

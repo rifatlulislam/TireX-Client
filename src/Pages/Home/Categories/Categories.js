@@ -10,10 +10,20 @@ const Categories = () => {
       <Container sx={{ py: 10 }}>
         <div className="section">
           <div className="section-title">
-            <h3 className="second-title" data-aos="fade-right">
+            <h3
+              className="second-title"
+              data-aos="fade-right"
+              data-aos-delay="80"
+              data-aos-duration="2000"
+            >
               bike category
             </h3>
-            <h3 className="main-title" data-aos="fade-left">
+            <h3
+              className="main-title"
+              data-aos="fade-left"
+              data-aos-delay="80"
+              data-aos-duration="2000"
+            >
               {" "}
               choose your style
             </h3>

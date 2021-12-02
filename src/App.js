@@ -20,7 +20,10 @@ const theme = createTheme({
 });
 
 // initializing animaiton on scroll
-AOS.init();
+AOS.init({
+  duration: 2200,
+  delay: 100,
+});
 function App() {
   return (
     <div className="App">
