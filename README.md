@@ -1,4 +1,4 @@
-# **TuaBike**
+# **TireX**
 
 ## About & Features
 
