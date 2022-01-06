@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "../../components/Shared/Footer/Footer";
-import Navigation from "../../components/Shared/Navigation/Navigation";
+import Header from "../../components/Shared/Header/Header";
 import AllBicycles from "../AllBicycles/AllBicycles";
 
 const Explore = () => {
   return (
     <>
-      <Navigation />
+      <Header />
       <AllBicycles />
       <Footer />
     </>

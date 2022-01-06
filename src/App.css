@@ -1,0 +1,22 @@
+/* commont styles */
+.section-title {
+  font-family: BerlinSansFBDemiBold;
+  text-align: center;
+  position: relative;
+  margin: 1rem 0;
+}
+.section-title > h3 {
+  text-transform: uppercase;
+}
+.second-title {
+  font-size: 5.3vw;
+  color: var(--second-color);
+  position: absolute;
+  left: 14%;
+  bottom: 55%;
+  z-index: -1;
+}
+.main-title {
+  font-size: 5.3vw;
+  z-index: 1;
+}

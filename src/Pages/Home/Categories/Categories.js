@@ -7,7 +7,7 @@ import "./Categories.css";
 const Categories = () => {
   return (
     <div>
-      <Container sx={{ py: 10 }}>
+      <Container sx={{ py: 9 }}>
         <div className="section">
           <div className="section-title">
             <h3
@@ -24,7 +24,6 @@ const Categories = () => {
               data-aos-delay="80"
               data-aos-duration="2000"
             >
-              {" "}
               choose your style
             </h3>
           </div>

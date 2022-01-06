@@ -1,4 +1,5 @@
 .special-section {
+  width: 100%;
   position: relative;
   margin-bottom: 290px;
   padding-top: 4rem;
@@ -37,4 +38,47 @@
   position: absolute;
   left: 8rem;
   bottom: -210px;
+}
+
+@media screen and (max-width: 800px) {
+  .special-section > .section-title {
+    text-align: center;
+  }
+  .special-section .second-title {
+    font-size: 3rem;
+  }
+  .special-section .main-title {
+    font-size: 3.8rem;
+  }
+  .special-section .section-title .btn {
+    font-size: 1.5rem;
+  }
+  .special-price {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .special-img {
+    width: 60%;
+    left: 6rem;
+    bottom: -57%;
+  }
+  .special-section .section-title .btn {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .special-section .second-title {
+    font-size: 2rem;
+  }
+  .special-section .main-title {
+    font-size: 3.2rem;
+  }
+  .special-section .section-title .btn {
+    font-size: 1.2rem;
+  }
+  .special-img {
+    width: 70%;
+    left: 6rem;
+    bottom: -48%;
+  }
 }

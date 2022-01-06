@@ -22,10 +22,10 @@ const Bicycles = () => {
   }, []);
   return (
     <div>
-      <Container sx={{ py: 10 }}>
+      <Container sx={{ py: 3 }}>
         <div className="section">
           <div className="section-title">
-            <h3 className="second-title" data-aos="fade-right">
+            <h3 className="bicycle-title" data-aos="fade-right">
               customer choice
             </h3>
             <h3 className="main-title" data-aos="fade-left">

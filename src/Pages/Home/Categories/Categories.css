@@ -1,27 +1,8 @@
 .section-content {
-  margin-top: 30px;
-  padding: 4rem 4rem 0;
+  margin-top: 2vmax;
+  padding: 3vmax 3vmax 0;
 }
-.section-title {
-  font-family: BerlinSansFBDemiBold;
-  text-align: center;
-  position: relative;
-}
-.section-title > h3 {
-  text-transform: uppercase;
-}
-.second-title {
-  font-size: 4.5rem;
-  color: var(--second-color);
-  position: absolute;
-  left: 14%;
-  bottom: 40%;
-  z-index: -1;
-}
-.main-title {
-  font-size: 3.5rem;
-  z-index: 1;
-}
+
 .category-img {
   padding: 1rem;
   height: 400px;
@@ -43,7 +24,7 @@
   transform: scale(1.3);
 }
 .category-title {
-  font-size: 4.1rem;
+  font-size: 4vw;
   font-weight: 700;
   padding: 2rem;
   position: absolute;

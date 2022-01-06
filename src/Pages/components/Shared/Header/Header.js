@@ -1,301 +1,229 @@
 import MenuIcon from "@mui/icons-material/Menu";
-import { Button, Container } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import Hidden from "@mui/material/Hidden";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import { useTheme } from "@mui/material/styles";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
+import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
-import { makeStyles } from "@mui/styles";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import * as React from "react";
+import { Link, useHistory } from "react-router-dom";
 import useAuth from "../../../../hooks/useAuth";
 
-// this header is not working after deploy..so i had to use a custome one..i kept it to fix later
-const drawerWidth = 200;
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    backgroundColor: "#1d1d1d",
-  },
-  link: {
-    textDecoration: "none",
-    color: "#3a3a3a",
-  },
-  navItemM: {
-    display: "flex",
-    alignItems: "center",
-    padding: ".8rem 0",
-    paddingLeft: "10%",
-    opacity: ".8",
-    transition: ".3s linear",
+const Header = () => {
+  const history = useHistory();
 
-    "&:hover": {
-      opacity: "1",
-      fontWeight: "700",
-      color: "black",
-    },
-  },
-  active: {
-    borderColor: theme.palette.primary.main,
-  },
-  navIcon: {
-    color: theme.palette.primary.main,
-    marginRight: 10,
-  },
-  navLogoText: {
-    color: theme.palette.primary.main,
-    textAlign: "center",
-    margin: "1rem .3rem",
-  },
-  logoImg: {
-    padding: "1rem",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  drawer: {
-    [theme.breakpoints.up("md")]: {
-      width: drawerWidth,
-      flexShrink: 0,
-      display: "none",
-    },
-  },
-  navbar: {
-    [theme.breakpoints.down("sm")]: {
-      width: drawerWidth,
-      flexShrink: 0,
-      display: "none",
-    },
-    display: "flex",
-    justifyContent: "space-between",
-  },
-  appBar: {
-    [theme.breakpoints.up("md")]: {
-      width: "100%",
-      display: "none",
-    },
-    backgroundColor: "#1d1d1d",
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up("md")]: {
-      display: "none",
-    },
-  },
-  // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-  },
-  navItem: {
-    marginLeft: "30px",
-    color: "#bbbbbb",
-    transition: "all .3s ease",
-    fontSize: "1.2rem",
-    fontWeight: "600",
-    letterSpacing: "3px",
-    "&:hover": {
-      color: "#fff",
-    },
-  },
-  linkItem: {
-    textDecoration: "none",
-    color: "#bbbbbb",
-  },
-  registerButton: {
-    backgroundColor: "transparent",
-    padding: "7px 12px",
-    border: "1px solid #15c7e7",
-    borderRadius: "14px",
-    color: "#fff",
-    transition: "all 0.3s ease 0s",
-    "$:hover": {
-      bacgrounColor: "#fff",
-      color: "black",
-    },
-  },
-}));
-
-const Header = ({ window, handleClickOpen }) => {
   const { user, logOut } = useAuth();
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  const {
-    // root,
-    appBar,
-    menuButton,
-    drawerPaper,
-    navItem,
-    linkItem,
-    link,
-    navItemM,
-  } = useStyles();
-
-  const theme = useTheme();
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
   };
 
-  const drawer = (
-    <div style={{ textAlign: "center" }}>
-      <Typography variant="h6">TuaBike</Typography>
-      <Divider />
-      <Link to="/" className={link}>
-        <ListItem button className={navItemM}>
-          <ListItemText primary={"Home"} />
-        </ListItem>
-      </Link>
-      <Divider />
-      <Link to="/explore" className={link}>
-        <ListItem button className={navItemM}>
-          <ListItemText primary={"Explore"} />
-        </ListItem>
-      </Link>
-      <Divider />
-      <Link to="/dashboard" className={link}>
-        <ListItem button className={navItemM}>
-          <ListItemText primary={"Dashboard"} />
-        </ListItem>
-      </Link>
-      <Divider />
-      {user?.email ? (
-        <>
-          <Button onClick={logOut} sx={{ color: "#15c7e7" }}>
-            Logout
-          </Button>
-        </>
-      ) : (
-        <>
-          <Link to="/login" className={link}>
-            <ListItem button className={navItemM}>
-              <ListItemText primary={"Login"} />
-            </ListItem>
-          </Link>
-          <Link to="/register" className={link}>
-            <ListItem button className={navItemM}>
-              <ListItemText primary={"Register"} />
-            </ListItem>
-          </Link>
-        </>
-      )}
-      <Divider />
-    </div>
-  );
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
 
   return (
-    <>
-      <Box>
-        <AppBar
-          className={appBar}
-          sx={{
-            backgroundColor: "#1d1d1d",
-            boxShadow: 0,
-          }}
-        >
-          <Toolbar>
+    <AppBar position="static">
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Typography
+            onClick={() => history.push("/")}
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              fontSize: "2rem",
+              fontFamily: "cursive",
+              cursor: "pointer",
+            }}
+          >
+            TireX
+          </Typography>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
-              sx={{ color: "#bbbbbb" }}
-              // color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              className={menuButton}
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
             >
-              <MenuIcon className="menu-icon" />
+              <MenuIcon />
             </IconButton>
-            <h3 className="title-name">TireX</h3>
-
-            <nav className={drawer}>
-              <Hidden mdUp implementation="css">
-                <Drawer
-                  container={container}
-                  variant="temporary"
-                  anchor={theme.direction === "rtl" ? "right" : "left"}
-                  open={mobileOpen}
-                  onClose={handleDrawerToggle}
-                  classes={{
-                    paper: drawerPaper,
-                  }}
-                  ModalProps={{
-                    keepMounted: true, // Better open performance on mobile.
-                  }}
-                >
-                  {drawer}
-                </Drawer>
-              </Hidden>
-            </nav>
-
-            <Container
-              className="navbar"
-              style={{
-                marginLeft: "28%",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", md: "none" },
               }}
             >
-              <div>
-                <Link className={linkItem} to="/">
-                  {" "}
-                  <span className={navItem}>Home</span>
-                </Link>
-                <Link className={linkItem} to="/explore">
-                  <span className={navItem}>Explore</span>
-                </Link>
-                <Link className={linkItem} to="/dashboard">
-                  <span className={navItem}>Dashboard</span>
-                </Link>
-              </div>
-              <div className="account">
-                {user?.email ? (
-                  <div>
-                    <span
-                      style={{
-                        fontSize: "1.1rem",
-                        letterSpacing: "1px",
-                        marginRight: "12px",
-                      }}
-                    >
-                      {user.displayName}
-                    </span>
-                    <Button onClick={logOut} sx={{ color: "#15c7e7" }}>
-                      Logout
-                    </Button>
+              <MenuItem
+                onClick={() => {
+                  handleCloseNavMenu();
+                  history.push("/");
+                }}
+              >
+                <Typography textAlign="center">Home</Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  handleCloseNavMenu();
+                  history.push("/explore");
+                }}
+              >
+                <Typography textAlign="center">Explore</Typography>
+              </MenuItem>
+            </Menu>
+          </Box>
+          <Typography
+            onClick={() => history.push("/")}
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              fontSize: "1.5rem",
+              fontFamily: "cursive",
+              cursor: "pointer",
+            }}
+          >
+            TireX
+          </Typography>
+          {/* pc nav-items */}
+          <div style={{ marginLeft: "auto" }}>
+            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+              <Button
+                onClick={() => {
+                  handleCloseNavMenu();
+                  history.push("/");
+                }}
+                sx={{
+                  my: 2,
+                  display: "block",
+                  color: "#bbbbbb",
+                  fontFamily: "MyriadProCondensed",
+                  fontSize: "1.1rem",
+                  "&:hover": {
+                    color: "#fff",
+                  },
+                }}
+              >
+                Home
+              </Button>
+              <Button
+                onClick={() => {
+                  handleCloseNavMenu();
+                  history.push("/explore");
+                }}
+                sx={{
+                  my: 2,
+                  display: "block",
+                  color: "#bbbbbb",
+                  fontFamily: "MyriadProCondensed",
+                  fontSize: "1.1rem",
+                  "&:hover": {
+                    color: "#fff",
+                  },
+                }}
+              >
+                Explore
+              </Button>
+            </Box>
+          </div>
+          {user.email ? (
+            <Box sx={{ flexGrow: 0, ml: 1 }}>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <div
+                    style={{
+                      color: "#15c7e7",
+                      fontSize: "1.3rem",
+                      fontWeight: "600",
+                    }}
+                  >
+                    {user.displayName}
                   </div>
-                ) : (
-                  <>
-                    <Link className={linkItem} to="/register">
-                      <Button varaint="outlined" style={{ color: "#15c7e7" }}>
-                        Register
-                      </Button>
-                    </Link>
-                    <Link className={linkItem} to="/login">
-                      <Button varaint="contained" style={{ color: "#15c7e7" }}>
-                        Login
-                      </Button>
-                    </Link>
-                  </>
-                )}
-              </div>
-            </Container>
-          </Toolbar>
-        </AppBar>
-      </Box>
-    </>
+                </IconButton>
+              </Tooltip>
+              <Menu
+                sx={{ mt: "45px" }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                <MenuItem
+                  onClick={() => {
+                    handleCloseNavMenu();
+                    history.push("/dashboard");
+                  }}
+                >
+                  <Typography textAlign="center">Dashboard</Typography>
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    handleCloseNavMenu();
+                    logOut();
+                  }}
+                >
+                  <Typography textAlign="center">Logout</Typography>
+                </MenuItem>
+              </Menu>
+            </Box>
+          ) : (
+            <Link
+              style={{
+                textDecoration: "none",
+                color: "#bbbbbb",
+                marginLeft: "1.3rem",
+              }}
+              to="/login"
+            >
+              <Button varaint="contained" style={{ color: "#15c7e7" }}>
+                Login
+              </Button>
+            </Link>
+          )}
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 };
-
 export default Header;

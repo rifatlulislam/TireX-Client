@@ -9,7 +9,6 @@
 - Admin can see orders place by all users and can change the status if he wants.
 - Admin can add cycles, update and delete services.
 - Also admin can add new admins
--
 
 ### Front-end Technology :
 

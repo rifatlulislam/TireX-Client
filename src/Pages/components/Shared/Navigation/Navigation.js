@@ -22,7 +22,7 @@ const Navigation = () => {
           >
             TireX
           </h3>
-          <nav>
+          <nav style={{ marginLeft: "auto" }}>
             <ul>
               <li>
                 <Link to="/home">Home</Link>
@@ -31,9 +31,11 @@ const Navigation = () => {
                 <Link to="/explore">Explore</Link>
               </li>
 
-              <li>
-                <Link to="/dashboard">Dashboard</Link>
-              </li>
+              {user.email && (
+                <li>
+                  <Link to="/dashboard">Dashboard</Link>
+                </li>
+              )}
             </ul>
           </nav>
           <div>
@@ -55,11 +57,6 @@ const Navigation = () => {
                 </div>
               ) : (
                 <>
-                  <Link className="link-item" to="/register">
-                    <Button varaint="outlined" style={{ color: "#15c7e7" }}>
-                      Register
-                    </Button>
-                  </Link>
                   <Link className="link-item" to="/login">
                     <Button varaint="contained" style={{ color: "#15c7e7" }}>
                       Login
