@@ -105,7 +105,7 @@ const Register = () => {
                 className="input-field"
               />
               <span style={{ letterSpacing: "2px", margin: "3px 0" }}>
-                Not have an account?
+                Already have an account?
                 <Link
                   to="/login"
                   style={{ color: "lightBlue", textDecoration: "none" }}

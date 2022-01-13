@@ -13,7 +13,7 @@ const Showcase = () => {
           <div className="slide">
             <div className="slide-text">
               <div className="slide-title">
-                <h3>plygon siskiu</h3>
+                <h3>polygon siskiu</h3>
               </div>
               <div className="slide-description">
                 <p>

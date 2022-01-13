@@ -61,7 +61,7 @@ const SingleOrder = ({ order, index, handleDelete }) => {
         </StyledTableCell>
         <StyledTableCell align="left">
           <Typography varaint="body1" sx={{ fontSize: "1.1rem" }}>
-            {order.product.name}
+            {order?.product?.name}
           </Typography>
         </StyledTableCell>
         <StyledTableCell align="left">

@@ -67,7 +67,7 @@ const MyOrders = () => {
                   style={{ border: "1px solid #15c7e7" }}
                 >
                   <div className="product-card-img">
-                    <img src={order.product.img} alt="" />
+                    <img src={order?.product?.img} alt="" />
                   </div>
                   <Typography variant="h5" sx={{ fontWeight: "bold", mb: 1 }}>
                     {order.product.name}
@@ -127,6 +127,7 @@ const MyOrders = () => {
                     </Button>
                     <Button
                       variant="outlined"
+                      style={{ backgroundColor: "rgb(220,20,20)" }}
                       onClick={() => handleDelete(order._id)}
                       startIcon={<DeleteIcon />}
                     >
