@@ -4,7 +4,7 @@ import {
   CircularProgress,
   Container,
   Grid,
-  Typography,
+  Typography
 } from "@mui/material";
 import { Box } from "@mui/system";
 import axios from "axios";
@@ -29,7 +29,7 @@ const MyOrders = () => {
         setShowLoader(false);
         setOrders(res.data);
       });
-  }, [isDeleted]);
+  }, [isDeleted,user?.email]);
 
   const handleDelete = (id) => {
     const result = window.confirm("Are You Sure to delete this order?");
@@ -38,8 +38,9 @@ const MyOrders = () => {
         .delete(`https://calm-reaches-87696.herokuapp.com/deleteOrder/${id}`)
         .then((res) => {
           if (res.data.deletedCount) {
-            setIsDeleted(true);
             notify("info", "Order Deleted");
+            setIsDeleted(true);
+
           }
         });
     }

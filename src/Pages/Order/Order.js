@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "../components/Shared/Footer/Footer";
-import Navigation from "../components/Shared/Navigation/Navigation";
+import Header from "../components/Shared/Header/Header";
 import BookOrder from "./BookOrder/BookOrder";
 
 const Order = () => {
   return (
     <div>
-      <Navigation />
+      <Header />
       <BookOrder />
       <Footer />
     </div>

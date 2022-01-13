@@ -71,6 +71,18 @@ const SingleOrder = ({ order, index, handleDelete }) => {
           </Typography>
         </StyledTableCell>
         <StyledTableCell align="left">
+          {" "}
+          <Typography
+            varaint="body1"
+            style={{
+              color: `${order.payment === "due" ? "red" : "green"}`,
+              fontSize: "1.1rem",
+            }}
+          >
+            {order.payment}
+          </Typography>
+        </StyledTableCell>
+        <StyledTableCell align="left">
           <FormControl>
             {/* <FormLabel
               style={{ color: "gray", fontWeight: "bold" }}

@@ -75,6 +75,9 @@ export default function ManageOrders() {
               Order Date
             </StyledTableCell>
             <StyledTableCell align="left" sx={{ fontSize: "1.2rem" }}>
+              payment
+            </StyledTableCell>
+            <StyledTableCell align="left" sx={{ fontSize: "1.2rem" }}>
               Status
             </StyledTableCell>
             <StyledTableCell align="left" sx={{ fontSize: "1.2rem" }}>
