@@ -46,7 +46,7 @@ const SingleOrder = ({ order, index, handleDelete }) => {
       .then((res) => {
         // console.log(res.data);
       });
-  }, [orderStatus]);
+  }, [orderStatus, id, order.payment]);
 
   return (
     <>
@@ -65,13 +65,11 @@ const SingleOrder = ({ order, index, handleDelete }) => {
           </Typography>
         </StyledTableCell>
         <StyledTableCell align="left">
-          {" "}
           <Typography varaint="body1" sx={{ fontSize: "1.1rem" }}>
             {order.date}
           </Typography>
         </StyledTableCell>
         <StyledTableCell align="left">
-          {" "}
           <Typography
             varaint="body1"
             style={{
@@ -96,6 +94,7 @@ const SingleOrder = ({ order, index, handleDelete }) => {
                 control={<Radio color="info" />}
                 label="Pending"
               ></FormControlLabel>
+
               <FormControlLabel
                 value="shipped"
                 control={<Radio color="info" />}
