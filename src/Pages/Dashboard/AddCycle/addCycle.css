@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 @media screen and (max-width: 650px) {
-  .login-container {
+  .addCycle-container {
     width: 90%;
   }
 }
