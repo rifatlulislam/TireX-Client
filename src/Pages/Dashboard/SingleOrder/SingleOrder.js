@@ -36,6 +36,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 const SingleOrder = ({ order, index, handleDelete }) => {
   const [orderStatus, setOrderStatus] = React.useState(order.status);
   const id = order._id;
+
   // update the status whenever admin selects
   React.useEffect(() => {
     axios
@@ -46,7 +47,7 @@ const SingleOrder = ({ order, index, handleDelete }) => {
       .then((res) => {
         // console.log(res.data);
       });
-  }, [orderStatus, id, order.payment]);
+  }, [orderStatus, id]);
 
   return (
     <>
@@ -95,11 +96,13 @@ const SingleOrder = ({ order, index, handleDelete }) => {
                 label="Pending"
               ></FormControlLabel>
 
-              <FormControlLabel
-                value="shipped"
-                control={<Radio color="info" />}
-                label="Shipped"
-              ></FormControlLabel>
+              {order.payment === "due" ? null : (
+                <FormControlLabel
+                  value="shipped"
+                  control={<Radio color="info" />}
+                  label="Shipped"
+                ></FormControlLabel>
+              )}
             </RadioGroup>
           </FormControl>
         </StyledTableCell>
