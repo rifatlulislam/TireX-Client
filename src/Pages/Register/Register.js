@@ -69,7 +69,7 @@ const Register = () => {
           alignItems: "center",
         }}
       >
-        <div style={{ maxWidth: "50%" }}>
+        <div className="register-container">
           <div className="form-container">
             <h3 className="register-title">Register</h3>
             <form

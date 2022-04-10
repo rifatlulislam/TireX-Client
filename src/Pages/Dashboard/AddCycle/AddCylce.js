@@ -45,7 +45,7 @@ const AddCylce = () => {
           marginTop: "10px",
         }}
       >
-        <div style={{ width: "48rem" }}>
+        <div className="addCycle-container">
           <div className="form-container">
             <h2
               style={{

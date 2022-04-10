@@ -4,18 +4,20 @@ import {
   CircularProgress,
   Container,
   Grid,
-  Typography
+  Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Rating from "react-rating";
+import { useHistory } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 
 const MyOrders = () => {
   const { user, notify } = useAuth();
   const [showLoader, setShowLoader] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false);
+  const history = useHistory();
 
   const [orders, setOrders] = useState([]);
   // console.log(orders);
@@ -29,7 +31,7 @@ const MyOrders = () => {
         setShowLoader(false);
         setOrders(res.data);
       });
-  }, [isDeleted,user?.email]);
+  }, [isDeleted, user?.email]);
 
   const handleDelete = (id) => {
     const result = window.confirm("Are You Sure to delete this order?");
@@ -40,7 +42,6 @@ const MyOrders = () => {
           if (res.data.deletedCount) {
             notify("info", "Order Deleted");
             setIsDeleted(true);
-
           }
         });
     }
@@ -126,9 +127,39 @@ const MyOrders = () => {
                     >
                       {order.status}
                     </Button>
+                    {/* payment button */}
+                    {order.payment === "due" ? (
+                      <Button
+                        variant="outlined"
+                        style={{
+                          color: "#fff",
+                          textTransform: "capitalize",
+                          background: "green",
+                        }}
+                        onClick={() =>
+                          history.push(`/dashboard/payment/${order._id}`)
+                        }
+                      >
+                        PAY
+                      </Button>
+                    ) : (
+                      <Button
+                        disabled
+                        variant="outlined"
+                        style={{
+                          backgroundColor: "rgba(0,0,0,0.5)",
+                          color: "#eee",
+                        }}
+                      >
+                        Paid
+                      </Button>
+                    )}
                     <Button
                       variant="outlined"
-                      style={{ backgroundColor: "rgb(220,20,20)" }}
+                      style={{
+                        backgroundColor: "rgb(210,20,20)",
+                        color: "#fff",
+                      }}
                       onClick={() => handleDelete(order._id)}
                       startIcon={<DeleteIcon />}
                     >

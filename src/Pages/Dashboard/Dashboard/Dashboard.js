@@ -20,7 +20,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import PropTypes from "prop-types";
 import * as React from "react";
 import {
   Link,
@@ -283,6 +282,9 @@ function Dashboard(props) {
           <Route exact path={`${path}/myOrders`}>
             <MyOrders />
           </Route>
+          <Route exact path={`${path}/payment/:orderId`}>
+            <Pay />
+          </Route>
           <Route exact path={`${path}/pay`}>
             <Pay />
           </Route>
@@ -303,13 +305,5 @@ function Dashboard(props) {
     </Box>
   );
 }
-
-Dashboard.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
 
 export default Dashboard;

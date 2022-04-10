@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import "./login.css";
 
 const Login = () => {
   const [error, setError] = useState(false);
@@ -50,7 +51,7 @@ const Login = () => {
           alignItems: "center",
         }}
       >
-        <div style={{ maxWidth: "40%" }}>
+        <div className="login-container">
           <div className="form-container">
             <h3
               style={{
